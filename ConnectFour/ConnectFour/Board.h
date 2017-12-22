@@ -4,6 +4,10 @@
 
 #define BOARD_WIDTH 700.0f
 #define BOARD_HEIGHT 600.0f
+#define BOARD_X_COORDINATE 290.0f
+#define BOARD_Y_COORDINATE 60.0f
+
+#define CHIP_RADIUS 40.0f
 
 /*
 Game Board Class - Stores and draws all pieces
@@ -18,7 +22,9 @@ class Board
 		/*
 		Draws board and pieces to window parameter
 		*/
-		void draw(const sf::RenderWindow &window);
+		void draw(sf::RenderWindow &window);
+
+
 		/*
 		Checks board to determine if the game is over.
 		Returns empty if game is NOT over.
