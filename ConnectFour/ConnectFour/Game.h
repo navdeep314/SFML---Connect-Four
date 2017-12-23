@@ -1,6 +1,7 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include "Board.h"
 
 class Game
 {
@@ -13,4 +14,5 @@ class Game
 		//void drawObjects();
 
 		sf::RenderWindow mWindow;
+		Board mBoard;
 };

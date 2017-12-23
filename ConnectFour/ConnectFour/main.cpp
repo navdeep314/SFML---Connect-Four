@@ -1,10 +1,12 @@
 #include <SFML/Graphics.hpp>
 
-#include "Board.h"
+#include "Game.h"
 #include <iostream>
 int main()
 {
-	Board board;
+	Game g;
+	g.run();
+	/*Board board;
 	
 	sf::RenderWindow window(sf::VideoMode(1280, 720), "SFML works!");
 	sf::CircleShape shape(100.f);
@@ -22,7 +24,7 @@ int main()
 		window.clear();
 		board.draw(window);
 		window.display();
-	}
+	}*/
 
 	return 0;
 }

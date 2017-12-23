@@ -1,6 +1,6 @@
 #include "Game.h"
 
-Game::Game() : mWindow(sf::VideoMode(1280, 720), "Connect Four")
+Game::Game() : mWindow(sf::VideoMode(1280, 720), "Connect Four"), mBoard()
 {
 
 }
@@ -18,11 +18,19 @@ void Game::run()
 		{
 			if (event.type == sf::Event::Closed)
 				mWindow.close();
+
+			if (event.type == sf::Event::MouseButtonPressed)
+			{
+				if (event.mouseButton.button == sf::Mouse::Left)
+				{
+					mBoard.movePlayer1(1);
+				}
+			}
 		}
 
 		mWindow.clear();
-		//.draw();
-		mWindow.display();
+		mBoard.draw(mWindow);
+ 		mWindow.display();
 	}
 
 
